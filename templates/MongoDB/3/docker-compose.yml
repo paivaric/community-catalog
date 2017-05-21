@@ -3,10 +3,14 @@ mongo-cluster:
   environment:
     MONGO_SERVICE_NAME: mongo-cluster
     CATTLE_SCRIPT_DEBUG: ${debug}
+    MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+    MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    MONGO_INITDB_DATABASE: ${MONGO_INITDB_DATABASE}
   entrypoint: /opt/rancher/bin/entrypoint.sh
   command:
   - --replSet
   - "${replset_name}"
+  - --auth
   image: mongo:3.4
   labels:
     io.rancher.scheduler.affinity:host_label: ${host_label}
