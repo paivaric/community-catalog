@@ -1,5 +1,5 @@
 name: MongoDB
 description: |
   MongoDB Replica Set.
-version: latest
+version: mongo-3.4
 category: Databases
