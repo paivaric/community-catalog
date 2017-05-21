@@ -24,6 +24,24 @@
       type: "string"
       required: false
       default: ""
+    - variable: MONGO_INITDB_ROOT_USERNAME
+      description: "Enable MONGO_INITDB_ROOT_USERNAME"
+      label: "MONGO_INITDB_ROOT_USERNAME"
+      type: "string"
+      required: false
+      default: ""
+    - variable: MONGO_INITDB_ROOT_PASSWORD
+      description: "Enable MONGO_INITDB_ROOT_PASSWORD"
+      label: "MONGO_INITDB_ROOT_PASSWORD"
+      type: "string"
+      required: false
+      default: ""
+    - variable: MONGO_INITDB_DATABASE
+      description: "MONGO_INITDB_DATABASE"
+      label: "MONGO_INITDB_DATABASE"
+      type: "string"
+      required: false
+      default: ""
 mongo-cluster:
   scale: 3
   retain_ip: true
