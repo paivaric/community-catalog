@@ -7,7 +7,7 @@ mongo-cluster:
   command:
   - --replSet
   - "${replset_name}"
-  image: bitnami/mongodb:latest
+  image: mongo:3.4
   labels:
     io.rancher.scheduler.affinity:host_label: ${host_label}
     io.rancher.container.hostname_override: container_name
